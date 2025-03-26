@@ -1,0 +1,14 @@
+@use "../../vendors/variable.scss" as *;
+
+.hightPage {
+    height: 222px;
+    background-color: $vert;
+
+    h1 {
+        font-family: "Bebas Neue", sans-serif;
+    }
+
+    .dev {
+        color: $vertClaire;
+    }
+}

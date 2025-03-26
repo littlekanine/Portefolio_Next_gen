@@ -1,0 +1,12 @@
+@use "../../vendors/variable.scss" as *;
+
+.header {
+    background-color: $vertClaire;
+    height: 21px;
+
+    button {
+        font-family: "Bebas Neue", sans-serif;
+        border: none;
+        background-color: transparent;
+    }
+}
