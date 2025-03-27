@@ -31,6 +31,7 @@ body,
 
 $vertClaire : #DBF0DD;
 $vert : #8EB69B;
+$vertFonce : #235146;
 
 
 // class
@@ -87,8 +88,16 @@ $vert : #8EB69B;
 	width: 80%;
 }
 
+.width75 {
+	width: 75%;
+}
+
 .width50 {
     width: 50%;
+}
+
+.width25 {
+	width: 25%;
 }
 
 .gap5 {

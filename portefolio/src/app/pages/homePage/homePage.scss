@@ -1,14 +1,69 @@
 @use "../../vendors/variable.scss" as *;
 
 .hightPage {
-    height: 222px;
+    height: 180px;
     background-color: $vert;
+
+    .custom-icon {
+        width: 20px;
+        color: $vertClaire !important;
+    }
+    .git {
+        left: 25px;
+        bottom: -15px;
+    }
+
+    .linkedin {
+        left: 50px;
+        bottom: -15px;
+    }
 
     h1 {
         font-family: "Bebas Neue", sans-serif;
+        font-size: 35px;
+        font-weight: 100;
+
+        .elia {
+            position: absolute;
+            left: -18px;
+            top: 15px;
+        }
+        .dev {
+            color: $vertClaire;
+        }
     }
 
-    .dev {
+    .photo {
+        .cadre {
+            width: 93px;
+            height: 123px;
+            border: 3px solid $vertFonce;
+            border-radius: 5px;
+        }
+    }
+}
+
+.what {
+    height: 180px;
+    background-color: $vertFonce;
+}
+
+.about {
+    height: 180px;
+    background-color: $vertFonce;
+
+    h2 {
+        font-family: "Bebas Neue", sans-serif;
         color: $vertClaire;
+    }
+
+    .js {
+        width: 30px;
+        color: $vertClaire !important;
+    }
+
+    .next {
+        background-color: $vertClaire !important;
+
     }
 }

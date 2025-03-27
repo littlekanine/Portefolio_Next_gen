@@ -1,0 +1,7 @@
+@use "../../vendors/variable.scss" as*;
+
+.card {
+    width: 164px;
+    height: 100px;
+    background-color: $vertFonce;
+}
