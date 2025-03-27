@@ -1,7 +1,34 @@
-@use "../../vendors/variable.scss" as*;
+@use '../../vendors/variable.scss' as *;
 
 .card {
-    width: 164px;
-    height: 100px;
-    background-color: $vertFonce;
+	width: 164px;
+	height: 100px;
+	background-color: $vertNoire;
+	border-radius: 10px;
+
+	.icon {
+		color: $vertClaire;
+		top: 5px;
+		left: 5px;
+	}
+
+	.titleDescription {
+		padding-top: 10px;
+		height: 50%;
+	}
+
+	.descritpion {
+		color: $vertClaire;
+		height: 50%;
+		font-size: 10px;
+	}
+
+	h3 {
+		color: $vertClaire;
+		font-size: 12px;
+	}
+
+	p {
+		color: $vertClaire;
+	}
 }

@@ -1,17 +1,18 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./card.scss";
-import Image from "next/image";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './card.scss';
 
-const Card = ({ iconSrc, title, text, altText = "Icon", width = 30, height = 30 }) => {
-    return (
-        <div className="flex items-center gap-4">
-            <FontAwesomeIcon icon={iconSrc} width={width} height={height} alt={altText} />
-            <div>
-                <h3 className="text-xl font-bold">{title}</h3>
-                <p className="text-gray-600">{text}</p>
-            </div>
-        </div>
-    );
+const Card = ({ iconSrc, title, text, altText = 'Icon', width = 30, height = 30 }) => {
+	return (
+		<div className="card flex center align-center relative column">
+			<FontAwesomeIcon className="icon absolute" icon={iconSrc} style={{ width, height }} alt={altText} />
+			<div className="flex column align-center titleDescription">
+				<h3 className="flex center align-center">{title}</h3>
+			</div>
+			<div className="flex center align-center descritpion">
+				<p className="text-center">{text}</p>
+			</div>
+		</div>
+	);
 };
 
 export default Card;
