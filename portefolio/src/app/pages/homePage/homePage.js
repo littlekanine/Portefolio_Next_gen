@@ -3,10 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareGithub, faLinkedin, faJs } from '@fortawesome/free-brands-svg-icons';
 import { faSwatchbook, faCode, faGlobe, faEye } from '@fortawesome/free-solid-svg-icons';
 import Card from '@/app/component/cards/card';
+import Carrousel from '@/app/component/carroussel/carroussel';
 
 const HomePage = () => {
 	return (
-		<div className="flex center align-center column">
+		<div className="flex center align-center column height100vh scroll">
 			<div className="hightPage flex center align-center widthFull">
 				<div className="width75 flex center align-center relative column">
 					<div className="flex center align-center relative column">
@@ -36,6 +37,9 @@ const HomePage = () => {
 			</div>
 			<div className="projects widthFull column gap10">
 				<h2 className="flex center ">&lt; Projects /&gt;</h2>
+                <div className='flex center align-center'>
+                    <Carrousel />
+                </div>
 			</div>
 			{/* <div className="about flex center widthFull padding10 column">
                 <div className="heightFull flex center column">

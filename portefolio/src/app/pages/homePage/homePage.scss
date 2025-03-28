@@ -1,7 +1,7 @@
 @use '../../vendors/variable.scss' as *;
 
 .hightPage {
-	height: 180px;
+	height: 230px;
 	background-color: $vert;
 
 	.custom-icon {
@@ -46,6 +46,7 @@
 .what {
 	height: 300px;
 	background-color: $vertFonce;
+	padding-bottom: 20px;
 
 	h2 {
 		font-family: 'Bebas Neue', sans-serif;
