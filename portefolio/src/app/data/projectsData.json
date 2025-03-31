@@ -1,0 +1,47 @@
+[
+	{
+		"id": 1,
+		"nom": "Portefolio Sophie Bluel",
+		"img": "sophie-bluel.png",
+		"langages": ["html5", "css3", "react"],
+		"website": "https://master--sophieblueleliakopff.netlify.app/",
+		"gitHubSite": "https://github.com/littlekanine/P6_Sophie_Bluel",
+		"iconSite": "globe",
+		"gitHub": "gitHub",
+		"description": [
+			"Gestion des événements utilisateurs avec JavaScript",
+			"Manipulation des éléments du DOM avec JavaScript",
+			"Récupération des données utilisateurs dans le JavaScript via des formulaires"
+		]
+	},
+	{
+		"id": 2,
+		"nom": "Kasa",
+		"img": "logoKasa.png",
+		"langages": ["html5", "css3", "react"],
+		"website": "https://666417e6971505aa8c1bdad6--incomparable-tarsier-3f8a6f.netlify.app/",
+		"gitHubSite": "https://github.com/littlekanine/Projet_8_Kasa",
+		"iconSite": "globe",
+		"gitHub": "gitHub",
+		"description": [
+			"Configuration de la navigation entre les pages de l'application avec React Router",
+			"Développement des éléments de l'interface du site web grâce à des composants React",
+			"Mise en œuvre des animations CSS"
+		]
+	},
+	{
+		"id": 3,
+		"nom": "Argent-Bank",
+		"img": "bank-tree.jpeg",
+		"langages": ["html5", "css3", "react", "MongoDB"],
+		"website": "https://666419a9ca7ec3abceede856--stellar-mousse-031a0f.netlify.app/",
+		"gitHubSite": "https://github.com/littlekanine/P11_ARGENTBANK",
+		"iconSite": "globe",
+		"gitHub": "gitHub",
+		"description": [
+			"Affichage des données du back end sur l'interface via des appels API",
+			"Configuration des routes API pour la communication client / serveur",
+			"Implémentation de la gestion des données avec Redux pour assurer le fonctionnement du front"
+		]
+	}
+]

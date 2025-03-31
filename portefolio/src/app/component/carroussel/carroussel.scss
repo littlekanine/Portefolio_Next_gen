@@ -11,6 +11,7 @@
     color: white;
     perspective: 1000px;
     transform-origin: center;
+    overflow: none;
 
     // This is the element that rotates with the animation
 
@@ -45,18 +46,13 @@
         transform-origin: center;
 
         &:nth-child(1) {
-            background: #fdd94f;
             transform: rotateY(0) translateZ(35vw);
         }
-
         &:nth-child(2) {
-            background: #f87949;
-            transform: rotateY(120deg) translateZ(35vw);
+            transform: rotateY(72deg) translateZ(35vw);
         }
-
         &:nth-child(3) {
-            background: #fbab48;
-            transform: rotateY(240deg) translateZ(35vw);
+            transform: rotateY(144deg) translateZ(35vw);
         }
     }
 }
