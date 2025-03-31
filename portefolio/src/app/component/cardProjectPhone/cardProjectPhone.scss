@@ -1,0 +1,9 @@
+@use '../../vendors/variable.scss' as *;
+
+.cardProject {
+	height: 100%;
+
+	.projetImage {
+		border-radius: 10px;
+	}
+}
