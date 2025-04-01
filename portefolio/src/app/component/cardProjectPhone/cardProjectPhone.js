@@ -4,12 +4,20 @@ import { useState } from 'react';
 import './cardProjectPhone.scss';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const CardProjectPhone = ({ nom, img, langages, website, gitHubSite, description }) => {
 	const [projectcliked, setProjectcliked] = useState(false);
+	const [plusClicked, setPlusClicked] = useState(false);
 
 	const handleClick = () => {
 		setProjectcliked((prev) => !prev);
+	};
+
+	const handleClickPlus = (e) => {
+		e.preventDefault();
+		setPlusClicked((prev) => !prev);
 	};
 
 	return (
@@ -27,7 +35,17 @@ const CardProjectPhone = ({ nom, img, langages, website, gitHubSite, description
 						onMouseLeave={() => setProjectcliked(false)}
 					>
 						<h2 className="flex center align-center">{nom}</h2>
-						<p>{description}</p>
+						<div className="description relative">
+							<p>{description}</p>
+							<button className="iconButton" onClick={handleClickPlus}>
+								<FontAwesomeIcon icon={faPlus} className="icon" />
+							</button>
+						</div>
+						{plusClicked && (
+							<div className="extraInfo">
+								<p>Plus dinfos ici...</p>
+							</div>
+						)}
 					</motion.div>
 				)}
 			</AnimatePresence>

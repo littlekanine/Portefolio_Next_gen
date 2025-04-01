@@ -29,17 +29,49 @@
 			font-size: 25px !important;
 		}
 
-		p {
-			// position: absolute;
-			padding: 5px;
-			color: $vertClaire;
-			font-size: 11px !important;
-			font-weight: 100;
-			border-radius: 0 0 10px 10px;
+		.description {
 			background-color: $vertNoire;
-			font-family: 'Karla';
-			font-weight: 300;
-			// bottom: 0;
+			border-radius: 0 0 10px 10px;
+
+			p {
+				// position: absolute;
+				padding: 5px;
+				color: $vertClaire;
+				font-size: 11px !important;
+				font-weight: 100;
+				font-family: 'Karla';
+				font-weight: 300;
+				// bottom: 0;
+			}
+
+			.iconButton {
+				margin-top: 20px;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				background: none;
+				border: none;
+				color: white;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				background-color: rgba(255, 255, 255, 0.2);
+				transition: background 0.3s ease;
+				z-index: 10;
+			}
+
+			.iconButton:hover {
+				background-color: rgba(255, 255, 255, 0.4);
+			}
+
+			.icon {
+				font-size: 20px;
+				color: $vertClaire;
+			}
 		}
 	}
 }
