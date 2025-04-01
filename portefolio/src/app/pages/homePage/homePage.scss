@@ -1,7 +1,7 @@
 @use '../../vendors/variable.scss' as *;
 
 .hightPage {
-	height: 350px;
+	height: 30%;
 	background-color: $vert;
 
 	.custom-icon {
@@ -60,6 +60,7 @@
 .projects {
 	height: 500px;
 	background-color: $vert;
+	padding-bottom: 50px;
 
 	h2 {
 		font-family: 'Bebas Neue', sans-serif;
@@ -67,16 +68,19 @@
 		font-weight: 100;
 		font-size: 30px;
 		padding-top: 10px;
+		margin-bottom: 20px;
 	}
 }
 
 .about {
-	height: 180px;
 	background-color: $vertFonce;
 
 	h2 {
 		font-family: 'Bebas Neue', sans-serif;
 		color: $vertClaire;
+		font-size: 30px;
+		font-weight: 100;
+		margin-bottom: 10px;
 	}
 
 	.js {

@@ -2,8 +2,44 @@
 
 .cardProject {
 	height: 100%;
+	position: relative;
+	// cursor: pointer;
 
 	.projetImage {
 		border-radius: 10px;
+		height: 100%;
+		width: 100%;
+	}
+
+	.sombre {
+		filter: brightness(0.5); /* Applique un filtre sombre sur l'image */
+	}
+
+	.projectInfo {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		h2 {
+			padding: 5px;
+			color: $vertClaire;
+			font-family: 'Bebas Neue', sans-serif;
+			font-weight: 100;
+			padding-top: 10px;
+			font-size: 25px !important;
+		}
+
+		p {
+			// position: absolute;
+			padding: 5px;
+			color: $vertClaire;
+			font-size: 11px !important;
+			font-weight: 100;
+			border-radius: 0 0 10px 10px;
+			background-color: $vertNoire;
+			font-family: 'Karla';
+			font-weight: 300;
+			// bottom: 0;
+		}
 	}
 }

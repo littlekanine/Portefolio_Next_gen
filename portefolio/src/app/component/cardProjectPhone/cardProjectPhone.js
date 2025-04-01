@@ -6,25 +6,30 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const CardProjectPhone = ({ nom, img, langages, website, gitHubSite, description }) => {
-	const [projectHover, setProjectHover] = useState(false);
+	const [projectcliked, setProjectcliked] = useState(false);
+
+	const handleClick = () => {
+		setProjectcliked((prev) => !prev);
+	};
 
 	return (
-		<div className={`cardProject relative ${projectHover ? 'hover' : ''}`}>
-			<Image src={img} alt={nom} className="projectImage cover  border10" width={90} height={90} />
+		<div onClick={handleClick} className={`cardProject overflow-none relative`}>
+			<Image src={img} alt={nom} className={` projetImage cover  border10 ${projectcliked ? 'sombre' : ''}`} width={90} height={90} />
 			<AnimatePresence>
-				{/* <motion.div className="projectInfo">
-				<h2>{nom}</h2>
-				<p>{description}</p>
-				<p>
-					<strong>Langages :</strong> {langages.join(', ')}
-				</p>
-				<a href={website} target="_blank" rel="noopener noreferrer">
-					Voir le site
-				</a>
-				<a href={gitHubSite} target="_blank" rel="noopener noreferrer">
-					GitHub
-				</a>
-			</motion.div> */}
+				{projectcliked && (
+					<motion.div
+						className="projectInfo"
+						initial={{ opacity: 0, y: 100 }}
+						animate={{ opacity: 1, y: 0 }}
+						exit={{ opacity: 0, y: 100 }}
+						transition={{ duration: 0.2 }}
+						onMouseEnter={() => setProjectcliked(true)}
+						onMouseLeave={() => setProjectcliked(false)}
+					>
+						<h2 className="flex center align-center">{nom}</h2>
+						<p>{description}</p>
+					</motion.div>
+				)}
 			</AnimatePresence>
 		</div>
 	);
