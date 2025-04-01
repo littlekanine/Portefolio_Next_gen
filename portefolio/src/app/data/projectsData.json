@@ -43,20 +43,5 @@
 			"Configuration des routes API pour la communication client / serveur",
 			"Implémentation de la gestion des données avec Redux pour assurer le fonctionnement du front"
 		]
-	},
-	{
-		"id": 4,
-		"nom": "Argent-Bank",
-		"img": "/bank-tree.jpeg",
-		"langages": ["html5", "css3", "react", "MongoDB"],
-		"website": "https://666419a9ca7ec3abceede856--stellar-mousse-031a0f.netlify.app/",
-		"gitHubSite": "https://github.com/littlekanine/P11_ARGENTBANK",
-		"iconSite": "globe",
-		"gitHub": "gitHub",
-		"description": [
-			"Affichage des données du back end sur l'interface via des appels API",
-			"Configuration des routes API pour la communication client / serveur",
-			"Implémentation de la gestion des données avec Redux pour assurer le fonctionnement du front"
-		]
 	}
 ]

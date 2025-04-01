@@ -1,25 +1,48 @@
 'use client';
 
 import './carroussel.scss';
-import { useEffect, useState } from 'react';
+import { useState, useRef } from 'react';
 import CardProjectPhone from '../cardProjectPhone/cardProjectPhone';
 import projectsData from '../../data/projectsData.json';
 
 const Carrousel = () => {
 	const totalProjects = projectsData.length;
 	const [currentIndex, setCurrentIndex] = useState(0);
+	const carouselRef = useRef(null);
 
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setCurrentIndex((prevIndex) => (prevIndex + 1) % projectsData.length);
-		}, 3000); // Change toutes les 3 secondes
+	let startX = 0;
 
-		return () => clearInterval(interval);
-	}, [totalProjects]);
+	// Gérer le début du swipe
+	const handleTouchStart = (e) => {
+		startX = e.touches[0].clientX;
+	};
+
+	// Gérer la fin du swipe
+	const handleTouchEnd = (e) => {
+		const endX = e.changedTouches[0].clientX;
+		const diff = startX - endX;
+
+		if (diff > 50) {
+			// Swipe vers la gauche (carte suivante)
+			setCurrentIndex((prev) => (prev + 1) % totalProjects);
+		} else if (diff < -50) {
+			// Swipe vers la droite (carte précédente)
+			setCurrentIndex((prev) => (prev - 1 + totalProjects) % totalProjects);
+		}
+	};
+
 	return (
 		<div className="flex center column">
-			<div className="icon-cards mt-30 flex column">
-				<div className="icon-cards__content flex column">
+			<div
+				className="icon-cards mt-30 flex column"
+				ref={carouselRef}
+				onTouchStart={handleTouchStart}
+				onTouchEnd={handleTouchEnd}
+			>
+				<div
+					className="icon-cards__content flex column"
+					style={{ transform: `translateZ(-35vw) rotateY(${-currentIndex * 120}deg)` }}
+				>
 					{projectsData.map((project, index) => (
 						<div
 							className="flex icon-cards__item"
@@ -40,9 +63,10 @@ const Carrousel = () => {
 					))}
 				</div>
 			</div>
+			{/* Indicateurs de navigation */}
 			<div className="flex dot-container center align-center gap10">
 				{projectsData.map((_, i) => (
-					<div key={i} className={`flex bullet ${currentIndex === i ? 'vertClaire' : 'vertFonce'}`}></div>
+					<div key={i} className={`bullet ${currentIndex === i ? 'vertClaire' : 'vertFonce'}`}></div>
 				))}
 			</div>
 		</div>
