@@ -1,12 +1,15 @@
-@use "../../vendors/variable.scss" as *;
+@use '../../vendors/variable.scss' as *;
 
 .header {
-    background-color: $vertClaire;
-    height: 21px;
+	background-color: $vertClaire;
+	height: 21px;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
 
-    button {
-        font-family: "Bebas Neue", sans-serif;
-        border: none;
-        background-color: transparent;
-    }
+	button {
+		font-family: 'Bebas Neue', sans-serif;
+		border: none;
+		background-color: transparent;
+	}
 }

@@ -7,7 +7,7 @@ import CardProjectPhone from '../cardProjectPhone/cardProjectPhone';
 import projectsData from '../../data/projectsData.json';
 
 const Carrousel = () => {
-	const totalProjects = projectsData.length;
+	const [openedProjectIndex, setOpenedProjectIndex] = useState(null);
 	const [isAnimating, setIsAnimating] = useState(false);
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const carouselRef = useRef(null);
@@ -36,10 +36,12 @@ const Carrousel = () => {
 
 	const nextSlide = () => {
 		setCurrentIndex((prev) => prev + 1);
+		setOpenedProjectIndex(null);
 	};
 
 	const prevSlide = () => {
 		setCurrentIndex((prev) => prev - 1);
+		setOpenedProjectIndex(null);
 	};
 
 	return (
@@ -60,6 +62,9 @@ const Carrousel = () => {
 								website={project.website}
 								gitHubSite={project.gitHubSite}
 								description={project.description}
+								isOpen={openedProjectIndex === index}
+								onClick={() => setOpenedProjectIndex(index)}
+								onClose={() => setOpenedProjectIndex(null)}
 							/>
 						</motion.div>
 					))}
