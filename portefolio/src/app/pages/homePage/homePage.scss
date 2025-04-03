@@ -60,7 +60,7 @@
 .projects {
 	height: 500px;
 	background-color: $vert;
-	padding-bottom: 60px;
+	padding-bottom: 85px;
 
 	h2 {
 		font-family: 'Bebas Neue', sans-serif;
@@ -90,5 +90,19 @@
 
 	.next {
 		background-color: $vertClaire !important;
+	}
+}
+
+.contact {
+	height: 500px;
+	background-color: $vertFonce;
+	padding-bottom: 20px;
+
+	h2 {
+		font-family: 'Bebas Neue', sans-serif;
+		color: $vertClaire;
+		font-weight: 100;
+		padding-top: 10px;
+		font-size: 30px;
 	}
 }

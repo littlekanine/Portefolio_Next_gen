@@ -5,6 +5,7 @@ import { faSwatchbook, faCode, faGlobe, faEye } from '@fortawesome/free-solid-sv
 import Card from '@/app/component/cards/card';
 import Carrousel from '@/app/component/carroussel/carroussel';
 import Image from 'next/image';
+import FormContact from '@/app/component/formcontact/formContact';
 
 const HomePage = () => {
 	return (
@@ -42,13 +43,19 @@ const HomePage = () => {
 					<Carrousel />
 				</div>
 			</div>
-			<div className="about flex center widthFull padding10 column">
+			{/* <div className="about flex center widthFull padding10 column">
 				<div className="heightFull flex center column">
 					<h2 className="flex center shadow">&lt;About /&gt;</h2>
 					<div className="flex center align-center row">
 						<FontAwesomeIcon icon={faJs} className="js" />
 						<Image src={'/nextjs-icon.svg'} width={30} height={30} className="next" />
 					</div>
+				</div>
+			</div> */}
+			<div className="contact widthFull flex center column gap10">
+				<h2 className="flex center title shadow">&lt; Contact /&gt;</h2>
+				<div className="flex center align-center widthFull">
+					<FormContact />
 				</div>
 			</div>
 		</div>
