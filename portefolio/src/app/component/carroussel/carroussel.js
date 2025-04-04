@@ -48,7 +48,7 @@ const Carrousel = () => {
 		<div className="flex center column">
 			<div className="icon-cards mt-30 flex column" ref={carouselRef} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
 				<motion.div
-					className="icon-cards__content flex column"
+					className="icon-cards__content flex  column"
 					style={{ transformStyle: 'preserve-3d' }}
 					animate={{ rotateY: -currentIndex * 120 }}
 					transition={{ type: 'spring', stiffness: 100, damping: 20 }}

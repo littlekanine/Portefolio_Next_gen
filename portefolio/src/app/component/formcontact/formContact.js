@@ -57,9 +57,10 @@ const FormContact = () => {
 					</button>
 				</div>
 			</form>
-			<div className="flex center align-center messageAlerte">
+			{messageAlerte ? <div className="flex center align-center messageAlerte">
 				<p className="messageForm">{messageAlerte}</p>
-			</div>
+			</div> : ''}
+			
 		</div>
 	);
 };

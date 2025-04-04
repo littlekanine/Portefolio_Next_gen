@@ -30,6 +30,7 @@
 			background-color: $vertClaire;
 			padding-left: 10px;
 			font-family: 'Karla';
+			color: $vertNoire;
 			&:focus {
 				outline: none;
 				border: none;
@@ -45,6 +46,8 @@
 			font-family: 'Karla';
 			padding-left: 10px;
 			padding-top: 10px;
+			color: $vertNoire;
+			resize: none;
 			&:focus {
 				outline: none;
 				border: none;
@@ -58,6 +61,7 @@
 		border-radius: 10px;
 		border: none;
 		background-color: $vertClaire;
+		color: $vertFonce;
 	}
 	.messageAlerte {
 		background-color: $vertClaire;
