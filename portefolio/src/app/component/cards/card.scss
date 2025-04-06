@@ -1,7 +1,7 @@
 @use '../../vendors/variable.scss' as *;
 
 .card {
-	width: 40%;
+	width: 45%;
 	height: 100px;
 	background-color: $vertNoire;
 	border-radius: 10px;
@@ -13,11 +13,16 @@
 	}
 
 	.titleDescription {
+		top: 0;
+		right: 10%;
 		padding-top: 10px;
 		height: 50%;
 	}
 
 	.descritpion {
+		position: absolute;
+		bottom: 0;
+		right: 0;
 		color: $vertClaire;
 		height: 50%;
 		font-size: 10px;
@@ -25,10 +30,14 @@
 
 	h3 {
 		color: $vertClaire;
-		font-size: 12px;
+		font-size: 15px;
+		font: 300;
 	}
 
 	p {
 		color: $vertClaire;
+		padding: 5px;
+		font-weight: 100;
+		font-size: 12px;
 	}
 }
