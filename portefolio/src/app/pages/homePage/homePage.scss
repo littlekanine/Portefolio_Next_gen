@@ -6,7 +6,7 @@
 
     .custom-icon {
         width: 20px;
-        color: $vertClaire !important;
+        color: $vertFonce !important;
     }
     .git {
         left: 0;
@@ -25,12 +25,11 @@
 
         .elia {
             position: absolute;
-            left: -18px;
             top: 15px;
             color: $vertNoire;
         }
         .dev {
-            color: $vertClaire;
+            color: $vertFonce;
         }
     }
 
@@ -46,7 +45,7 @@
         }
         .ribbon {
             --d: 0.8em; /* the depth */
-            top: 35%;
+            top: 23%;
             left: -30%;
             translate: 0 -50%;
             // inset-inline: calc(28 * var(--d));
@@ -55,8 +54,8 @@
             clip-path: polygon(0 var(--d), calc(100% - var(--d)) var(--d), calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)), var(--d) 100%, 0 calc(100% - var(--d)));
             border-image: conic-gradient(#0008 0 0) 50% / var(--d);
             background-color: $vertFonce; /* the main color */
-            padding-left: 20px;
-            padding-right: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
             
             span {
                 font-family: 'karla', sans-serif;
@@ -75,9 +74,30 @@
     }
 }
 
+.about {
+    // height: 300px;
+    h2 {
+        font-family: "Bebas Neue", sans-serif;
+        color: $vertClaire;
+        font-size: 30px;
+        font-weight: 100;
+        margin-bottom: 10px;
+        top: 0;
+        left: 0;
+    }
+
+    p {
+        font-family: "Karla", sans-serif;
+        color: $vertClaire;
+        font-size: 15px;
+        font-weight: 100;
+        margin-bottom: 10px;
+        padding-top: 30px;
+    }
+}
+
 .what {
     height: 300px;
-    background-color: $vertFonce;
     padding-bottom: 20px;
 
     h2 {
@@ -103,26 +123,6 @@
     }
 }
 
-.about {
-    background-color: $vertFonce;
-
-    h2 {
-        font-family: "Bebas Neue", sans-serif;
-        color: $vertClaire;
-        font-size: 30px;
-        font-weight: 100;
-        margin-bottom: 10px;
-    }
-
-    .js {
-        width: 30px;
-        color: $vertClaire !important;
-    }
-
-    .next {
-        background-color: $vertClaire !important;
-    }
-}
 
 .contact {
     height: 500px;
