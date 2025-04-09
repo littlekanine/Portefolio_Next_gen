@@ -50,7 +50,7 @@
 
 	.phrase {
 		color: $vertClaire;
-		width: 40%;
+		width: 150px;
 		font-family: 'Karla';
 		font-weight: 100;
 		top: 30px;
@@ -102,68 +102,6 @@
 	}
 }
 
-.about {
-	.location {
-		padding-left: 10px;
-		gap: 5px !important;
-		h3 {
-			font-family: 'Karla';
-			font-weight: 100;
-			font-size: 20px;
-			padding-right: 10px;
-			color: $vertClaire;
-		}
-
-		.location {
-			width: 25px;
-			color: $vertClaire;
-		}
-		.container {
-			margin: 0 !important;
-		}
-	}
-	// height: 300px;
-	h2 {
-		font-family: 'Bebas Neue', sans-serif;
-		color: $vertClaire;
-		font-size: 30px;
-		font-weight: 100;
-	}
-
-	.cadre {
-		width: 35%;
-		height: 160px;
-		z-index: 100;
-		margin-bottom: 10px;
-
-		.imageElia {
-			border: 3px solid $vertClaire;
-			border-radius: 5px;
-			z-index: -10;
-			object-fit: cover;
-		}
-	}
-
-	p {
-		font-family: 'Karla', sans-serif;
-		color: $vertClaire;
-		font-size: 15px;
-		font-weight: 100;
-	}
-}
-
-.what {
-	height: 300px;
-	padding-bottom: 20px;
-
-	h2 {
-		font-family: 'Bebas Neue', sans-serif;
-		color: $vertClaire;
-		font-weight: 100;
-		font-size: 30px;
-	}
-}
-
 .projects {
 	background-color: $vert;
 	padding-bottom: 20px;
@@ -179,7 +117,7 @@
 
 .contact {
 	height: 500px;
-	background-color: $vertFonce;
+	background: linear-gradient(0deg, rgba(35, 81, 70, 1) 0%, rgba(142, 182, 155, 1) 90%);
 	padding-bottom: 20px;
 
 	h2 {
