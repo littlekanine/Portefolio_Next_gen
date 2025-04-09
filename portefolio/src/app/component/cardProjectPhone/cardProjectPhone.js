@@ -24,9 +24,9 @@ const CardProjectPhone = ({ nom, img, langages, website, gitHubSite, description
 	};
 
 	return (
-		<div className="cardContainer flex column relative">
-			<div onClick={onClick} className="cardProject overflow-none relative column">
-				<Image src={img} alt={nom} className={`projetImage cover border10 ${isOpen ? 'sombre' : ''}`} width={90} height={90} />
+		<div className={`cardContainer flex column relative ${plusClicked && isOpen ? 'extraOpened' : ''}`}>
+			<div onClick={onClick} className="cardProject overflow-none relative column gap10">
+				<Image src={img} alt={nom} className={`projetImage cover border10 ${isOpen ? 'sombre' : ''} `} width={90} height={90} />
 				<AnimatePresence>
 					{isOpen && (
 						<motion.div
@@ -53,7 +53,7 @@ const CardProjectPhone = ({ nom, img, langages, website, gitHubSite, description
 			<AnimatePresence>
 				{plusClicked && isOpen && (
 					<motion.div
-						className="extraInfo absolute flex center align-center gap10"
+						className="extraInfo flex center align-center gap10 absolute"
 						initial={{ opacity: 0, y: -10 }}
 						animate={{ opacity: 1, y: 0 }}
 						exit={{ opacity: 0, y: -10 }}

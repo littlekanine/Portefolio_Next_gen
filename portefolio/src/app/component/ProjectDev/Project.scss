@@ -1,0 +1,15 @@
+@use '../../vendors/variable.scss' as *;
+
+.project-list {
+	width: 90%;
+	max-width: 400px;
+	margin: 0 auto;
+
+	.cardContainer {
+		max-height: 200px;
+
+		&.extraOpened {
+			margin-bottom: 30px;
+		}
+	}
+}

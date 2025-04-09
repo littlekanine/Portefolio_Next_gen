@@ -2,12 +2,13 @@
 
 .cardProject {
 	height: 100%;
-	position: relative;
-	// cursor: pointer;
 
+	&.extraOpened {
+		padding-bottom: 30px;
+	}
 	.projetImage {
 		border-radius: 10px;
-		height: 100%;
+		max-height: 160px;
 		width: 100%;
 	}
 
@@ -49,7 +50,7 @@
 
 			.iconButton {
 				position: absolute;
-				bottom: 4%;
+				bottom: 9%;
 				right: 2%;
 				background: none;
 				border: none;
@@ -71,6 +72,8 @@
 }
 
 .extraInfo {
+	top: 100%; // se positionne juste après le container (image + info)
+	left: 0;
 	top: calc(100% + 5px); /* Ajoute un petit espace sous la carte */
 	transform: translateX(-50%);
 	width: 100%; /* Ajuste la largeur pour rester aligné */

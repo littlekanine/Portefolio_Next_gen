@@ -3,7 +3,7 @@ import './card.scss';
 
 const Card = ({ iconSrc, title, text, altText = 'Icon', width = 30, height = 30 }) => {
 	return (
-		<div className="card flex center align-center relative column">
+		<div className="card flex center align-center relative column shadow">
 			<FontAwesomeIcon className="icon absolute" icon={iconSrc} style={{ width, height }} alt={altText} />
 			<div className=" absolute titleDescription">
 				<h3 className="flex center align-center">{title}</h3>

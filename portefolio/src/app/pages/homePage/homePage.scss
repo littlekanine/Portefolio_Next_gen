@@ -21,16 +21,16 @@
 		z-index: 10;
 	}
 
-	.dot {
-		color: $vertClaire;
-		background-image: radial-gradient($vertClaire 1px, transparent 1px);
-		background-size: 10px 10px;
-		width: 127px;
-		height: 27px;
-		top: 77px;
-		left: 45px;
-		z-index: 1;
-	}
+	// .dot {
+	// 	color: $vertClaire;
+	// 	background-image: radial-gradient($vertClaire 1px, transparent 1px);
+	// 	background-size: 10px 10px;
+	// 	width: 127px;
+	// 	height: 27px;
+	// 	top: 77px;
+	// 	left: 45px;
+	// 	z-index: 1;
+	// }
 
 	h1 {
 		font-family: 'Bebas Neue', sans-serif;
@@ -41,7 +41,7 @@
 		.elia {
 			position: absolute;
 			top: 15px;
-			color: $vertNoire;
+			color: $vertClaire;
 		}
 		.dev {
 			color: $vertFonce;
@@ -99,38 +99,48 @@
 				font-weight: 100;
 			}
 		}
-
-		.cadre {
-			width: 100%;
-			height: 150px;
-			border: 3px solid $vertFonce;
-			border-radius: 5px;
-		}
 	}
 }
 
 .about {
+	.location {
+		padding-left: 10px;
+		gap: 5px !important;
+		h3 {
+			font-family: 'Karla';
+			font-weight: 100;
+			font-size: 20px;
+			padding-right: 10px;
+			color: $vertClaire;
+		}
+
+		.location {
+			width: 25px;
+			color: $vertClaire;
+		}
+		.container {
+			margin: 0 !important;
+		}
+	}
 	// height: 300px;
 	h2 {
 		font-family: 'Bebas Neue', sans-serif;
 		color: $vertClaire;
 		font-size: 30px;
 		font-weight: 100;
-		margin-bottom: 10px;
-		top: 0;
-		left: 0;
 	}
 
 	.cadre {
-		margin-top: 35px;
 		width: 35%;
 		height: 160px;
-		border: 3px solid $vertClaire;
-		border-radius: 5px;
 		z-index: 100;
+		margin-bottom: 10px;
 
-		Image {
+		.imageElia {
+			border: 3px solid $vertClaire;
+			border-radius: 5px;
 			z-index: -10;
+			object-fit: cover;
 		}
 	}
 
@@ -139,7 +149,6 @@
 		color: $vertClaire;
 		font-size: 15px;
 		font-weight: 100;
-		padding-top: 35px;
 	}
 }
 
@@ -156,9 +165,8 @@
 }
 
 .projects {
-	height: 500px;
 	background-color: $vert;
-	padding-bottom: 25%;
+	padding-bottom: 20px;
 	h2 {
 		font-family: 'Bebas Neue', sans-serif;
 		color: $vertFonce;
@@ -180,5 +188,12 @@
 		font-weight: 100;
 		padding-top: 10px;
 		font-size: 30px;
+	}
+
+	h3 {
+		font-family: 'Karla', sans-serif;
+		color: $vertClaire;
+		font-weight: 100;
+		font-size: 20px;
 	}
 }

@@ -1,9 +1,9 @@
 import './homePage.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareGithub, faLinkedin, faJs } from '@fortawesome/free-brands-svg-icons';
-import { faSwatchbook, faCode, faGlobe, faEye } from '@fortawesome/free-solid-svg-icons';
+import { faSwatchbook, faCode, faGlobe, faEye, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import Card from '@/app/component/cards/card';
-import Carrousel from '@/app/component/carroussel/carroussel';
+import Project from '@/app/component/ProjectDev/project';
 import FormContact from '@/app/component/formcontact/formContact';
 import Image from 'next/image';
 
@@ -28,10 +28,10 @@ const HomePage = () => {
 			<div className="widthFull flex center align-center column gap10 vertFonce">
 				<div className="about flex center widthFull padding10 column">
 					<div className="heightFull flex center column relative">
-						<h2 className="flex center shadow absolute">About me </h2>
+						<h2 className="flex shadow">About me </h2>
 						<div className="flex center align-center widthFull row">
-							<div className="cadre flex center align-center">
-								<Image src="/elia.png" alt="elia" width={150} height={150} className="imageElia" />
+							<div className="cadre flex  align-center">
+								<Image src="/PhotoPortFolio.jpg" alt="elia" width={150} height={150} className="imageElia shadow" />
 							</div>
 							<div className=" flex center align-center column gap10">
 								<p className="text text-center padding10">
@@ -39,6 +39,10 @@ const HomePage = () => {
 									techniques et trouver des solutions innovantes pour répondre aux besoins de mes clients.
 								</p>
 							</div>
+						</div>
+						<div className="location flex row ">
+							<FontAwesomeIcon icon={faLocationDot} className="custom-icon location" />
+							<h3>Toulouse</h3>
 						</div>
 					</div>
 				</div>
@@ -57,11 +61,12 @@ const HomePage = () => {
 			<div className="projects widthFull column gap10">
 				<h2 className="flex center title shadow"> Projects</h2>
 				<div className="flex center align-center">
-					<Carrousel />
+					<Project />
 				</div>
 			</div>
 			<div className="contact widthFull flex center column gap10">
 				<h2 className="flex center title shadow"> Contact </h2>
+				<h3 className="flex center align-center">N'hésitez pas à me laisser un message</h3>
 				<div className="flex center align-center widthFull">
 					<FormContact />
 				</div>
