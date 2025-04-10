@@ -1,153 +1,152 @@
-@use '../../vendors/variable.scss' as *;
+@use "../../vendors/variable.scss" as *;
 
 .about {
-	width: 100%;
-	background-color: #2c4a3b;
-	padding: 5rem 0;
-	position: relative;
-	overflow: hidden;
+    width: 100%;
+    background-color: #2c4a3b;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
 
-	&__background {
-		position: absolute;
-		inset: 0;
-		overflow: hidden;
-	}
+    &__background {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+    }
 
-	&__circle {
-		position: absolute;
-		border-radius: 50%;
+    &__circle {
+        position: absolute;
+        border-radius: 50%;
 
-		&--large {
-			width: 200px;
-			height: 200px;
-			border: 1px solid #96b6a2;
-			opacity: 0.1;
-			top: 5rem;
-			right: -5rem;
-			animation: spin 20s linear infinite;
-		}
+        &--large {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #96b6a2;
+            opacity: 0.1;
+            top: 5rem;
+            right: -5rem;
+            animation: spin 20s linear infinite;
+        }
 
-		&--small {
-			width: 150px;
-			height: 150px;
-			background-color: #96b6a2;
-			filter: blur(48px);
-			opacity: 0.05;
-			bottom: 5rem;
-			left: 5rem;
-		}
-	}
+        &--small {
+            width: 150px;
+            height: 150px;
+            background-color: #96b6a2;
+            filter: blur(48px);
+            opacity: 0.05;
+            bottom: 5rem;
+            left: 5rem;
+        }
+    }
 
-	&__container {
-		position: relative;
-		z-index: 10;
-		max-width: 1280px;
-		margin: 0 auto;
-		padding: 0 1.5rem;
-	}
+    &__container {
+        position: relative;
+        z-index: 10;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
 
-	&__title {
-		color: white;
-		font-size: 2.5rem;
-		font-weight: bold;
-		margin-bottom: 3rem;
-	}
+    .about__image {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+		border : 2px solid $vertClaire
+    }
 
-	&__content {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 3rem;
+    &__title {
+        color: white;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 3rem;
+    }
 
-		@media (min-width: 1024px) {
-			grid-template-columns: 1fr 1fr;
-		}
-	}
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
 
-	&__column {
-		&--left {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: 1rem;
-		}
+        @media (min-width: 1024px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
 
-		&--right {
-			display: flex;
-			flex-direction: column;
-			gap: 2rem;
-		}
-	}
+    &__column {
+        &--left {
+            gap: 1rem;
+        }
 
-	&__image {
-		border-radius: 0.5rem;
-		width: 100%;
-		max-width: 400px;
-	}
+        &--right {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
 
-	&__location {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		color: #96b6a2;
-	}
+    &__location {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #96b6a2;
+    }
 
-	&__description {
-		color: #96b6a2;
-		font-size: 1.125rem;
-		line-height: 1.75rem;
-	}
+    &__description {
+        color: #96b6a2;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
 
-	&__whatido {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-	}
+    &__whatido {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 
-	&__subtitle {
-		font-size: 1.875rem;
-		font-weight: bold;
-		color: white;
-	}
+    &__subtitle {
+        font-size: 1.875rem;
+        font-weight: bold;
+        color: white;
+    }
 
-	&__cards {
-		display: grid;
-		gap: 1.5rem;
+    &__cards {
+        display: grid;
+        gap: 1.5rem;
 
-		@media (min-width: 768px) {
-			grid-template-columns: 1fr 1fr;
-		}
-	}
+        @media (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
 
-	&__card {
-		background-color: #1a2c23;
-		padding: 1.5rem;
-		border-radius: 0.5rem;
-		display: flex;
-		flex-direction: column;
-		gap: 0.75rem;
-	}
+    &__card {
+        background-color: #1a2c23;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
 
-	&__icon {
-		color: #96b6a2;
-	}
+    &__icon {
+        color: #96b6a2;
+    }
 
-	&__card-title {
-		color: white;
-		font-weight: 500;
-	}
+    &__card-title {
+        color: white;
+        font-weight: 500;
+    }
 
-	&__card-text {
-		font-size: 0.875rem;
-		color: #96b6a2;
-	}
+    &__card-text {
+        font-size: 0.875rem;
+        color: #96b6a2;
+    }
 }
 
 @keyframes spin {
-	0% {
-		transform: rotate(0);
-	}
+    0% {
+        transform: rotate(0);
+    }
 
-	100% {
-		transform: rotate(360deg);
-	}
+    100% {
+        transform: rotate(360deg);
+    }
 }

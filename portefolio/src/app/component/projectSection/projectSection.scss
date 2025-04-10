@@ -1,0 +1,133 @@
+@use "../../vendors/variable.scss" as *;
+
+.projects {
+    &__container {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__intro {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    &__intro-img {
+        max-width: 250px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__intro-text {
+        flex: 1;
+    }
+
+    &__intro-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    // Project Card Styles (La taille reste inchangée)
+    &__card {
+        width: 100%;
+        max-width: 400px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        // When card is opened (selected)
+        &--opened {
+            background: rgba(0, 0, 0, 0.1); // Grayed background when selected
+            opacity: 0.8;
+        }
+
+        &-img {
+            width: 100%;
+            overflow: hidden;
+            height: auto
+        }
+
+        &-image {
+            max-height: 400px;
+            width: 100%;
+        }
+
+        // Description and name that appear when card is clicked
+        &__card-info {
+            padding: 1rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7); // Dark background for the description
+            color: #fff;
+            text-align: left;
+            padding: 1rem;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            opacity: 0; // Hidden initially, fades in when card is selected
+
+            // Fade-in transition
+            transition: opacity 0.3s ease;
+        }
+
+        // When the project card is opened, show the information
+        &--opened &__card-info {
+            opacity: 1;
+        }
+    }
+
+    // Links section within the project card
+    &__links {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &__link {
+        font-size: 1rem;
+        color: #007bff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    // Language tags for each project
+    &__languages {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    &__language {
+        background: #f0f0f0;
+        padding: 0.25rem 0.5rem;
+        border-radius: 12px;
+        font-size: 0.875rem;
+    }
+}
