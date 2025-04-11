@@ -1,6 +1,7 @@
 @use "../../vendors/variable.scss" as *;
 
 .projects {
+    background-color:  linear-gradient(to bottom right, #2c4a3b, #1a2c23) !important;
     &__container {
         padding: 2rem;
         max-width: 1200px;
@@ -53,9 +54,11 @@
         transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
         cursor: pointer;
         position: relative;
+        border: 2px solid $vertClaire;
 
         &:hover {
             transform: scale(1.05);
+            transition: 0.5s; // Brighten the card on hover
         }
 
         // When card is opened (selected)
@@ -67,37 +70,51 @@
         &-img {
             width: 100%;
             overflow: hidden;
-            height: auto
+            height: auto;
         }
 
         &-image {
             max-height: 400px;
             width: 100%;
+
+            &:hover {
+                filter: brightness(0.5);
+            }
         }
 
         // Description and name that appear when card is clicked
-        &__card-info {
+        &-info {
             padding: 1rem;
             position: absolute;
-            bottom: 0;
+            top: 0;
             left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7); // Dark background for the description
-            color: #fff;
+            width: 100%;
+            height: 100%;
+            color: $vertClaire;
             text-align: left;
             padding: 1rem;
             border-top-left-radius: 12px;
             border-top-right-radius: 12px;
-            opacity: 0; // Hidden initially, fades in when card is selected
+            background-color: transparent;
 
             // Fade-in transition
             transition: opacity 0.3s ease;
+
+            &:hover {
+                opacity: 1 !important; // Show the text when hovered
+            }
+        }
+
+        &-name {
+            color: $vertClaire !important;
+        }
+
+        &:hover .projects__card-img {
+            filter: brightness(0.4);
+            transition: filter 0.3s ease;
         }
 
         // When the project card is opened, show the information
-        &--opened &__card-info {
-            opacity: 1;
-        }
     }
 
     // Links section within the project card

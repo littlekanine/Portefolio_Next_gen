@@ -1,137 +1,128 @@
-@use '../../vendors/variable.scss' as *;
+@use "../../vendors/variable.scss" as *;
 
 .hightPage {
-	height: 40%;
-	background-color: $vert;
-	padding: 5px 10px 30px 10px;
+    height: 40%;
+    background-color: $vert;
+    padding: 5px 10px 30px 10px;
 
-	.custom-icon {
-		width: 20px;
-		color: $vertFonce !important;
-	}
-	.git {
-		left: 0;
-		bottom: -15px;
-		z-index: 10;
-	}
+    .custom-icon {
+        width: 20px;
+        color: $vertFonce !important;
+    }
+    .git {
+        left: 0;
+        bottom: -15px;
+        z-index: 10;
+    }
 
-	.linkedin {
-		left: 25px;
-		bottom: -15px;
-		z-index: 10;
-	}
+    .linkedin {
+        left: 25px;
+        bottom: -15px;
+        z-index: 10;
+    }
 
-	// .dot {
-	// 	color: $vertClaire;
-	// 	background-image: radial-gradient($vertClaire 1px, transparent 1px);
-	// 	background-size: 10px 10px;
-	// 	width: 127px;
-	// 	height: 27px;
-	// 	top: 77px;
-	// 	left: 45px;
-	// 	z-index: 1;
-	// }
+    // .dot {
+    // 	color: $vertClaire;
+    // 	background-image: radial-gradient($vertClaire 1px, transparent 1px);
+    // 	background-size: 10px 10px;
+    // 	width: 127px;
+    // 	height: 27px;
+    // 	top: 77px;
+    // 	left: 45px;
+    // 	z-index: 1;
+    // }
 
-	h1 {
-		font-family: 'Bebas Neue', sans-serif;
-		font-size: 35px;
-		font-weight: 100;
-		z-index: 10;
+    h1 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 35px;
+        font-weight: 100;
+        z-index: 10;
 
-		.elia {
-			position: absolute;
-			top: 15px;
-			color: $vertClaire;
-		}
-		.dev {
-			color: $vertFonce;
-		}
-	}
+        .elia {
+            position: absolute;
+            top: 15px;
+            color: $vertClaire;
+        }
+        .dev {
+            color: $vertFonce;
+        }
+    }
 
-	.phrase {
-		color: $vertClaire;
-		width: 150px;
-		font-family: 'Karla';
-		font-weight: 100;
-		top: 30px;
-		right: 10px;
-		transform: rotate(-10deg);
-		font-size: 15px;
-		text-align: center;
-	}
+    .phrase {
+        color: $vertClaire;
+        width: 150px;
+        font-family: "Karla";
+        font-weight: 100;
+        top: 30px;
+        right: 10px;
+        transform: rotate(-10deg);
+        font-size: 15px;
+        text-align: center;
+    }
 
-	.photo {
-		padding-top: 30px;
-		/* HTML: <div class="ribbon">Your text content</div> */
-		.ribbon {
-			font-size: 10px;
-			font-weight: bold;
-			color: #fff;
-			transform: rotate(-30deg);
-		}
-		.ribbon {
-			--d: 0.8em; /* the depth */
-			top: 23%;
-			left: -30%;
-			translate: 0 -50%;
-			// inset-inline: calc(28 * var(--d));
-			padding-block: var(--d);
-			line-height: 1.8;
-			clip-path: polygon(
-				0 var(--d),
-				calc(100% - var(--d)) var(--d),
-				calc(100% - var(--d)) 0,
-				100% var(--d),
-				100% calc(100% - var(--d)),
-				var(--d) calc(100% - var(--d)),
-				var(--d) 100%,
-				0 calc(100% - var(--d))
-			);
-			border-image: conic-gradient(#0008 0 0) 50% / var(--d);
-			background-color: $vertFonce; /* the main color */
-			padding-left: 10px;
-			padding-right: 10px;
+    .photo {
+        padding-top: 30px;
+        /* HTML: <div class="ribbon">Your text content</div> */
+        .ribbon {
+            font-size: 10px;
+            font-weight: bold;
+            color: #fff;
+            transform: rotate(-30deg);
+        }
+        .ribbon {
+            --d: 0.8em; /* the depth */
+            top: 23%;
+            left: -30%;
+            translate: 0 -50%;
+            // inset-inline: calc(28 * var(--d));
+            padding-block: var(--d);
+            line-height: 1.8;
+            clip-path: polygon(0 var(--d), calc(100% - var(--d)) var(--d), calc(100% - var(--d)) 0, 100% var(--d), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)), var(--d) 100%, 0 calc(100% - var(--d)));
+            border-image: conic-gradient(#0008 0 0) 50% / var(--d);
+            background-color: $vertFonce; /* the main color */
+            padding-left: 10px;
+            padding-right: 10px;
 
-			span {
-				font-family: 'karla', sans-serif;
-				font-size: 10px;
-				color: $vertClaire;
-				font-weight: 100;
-			}
-		}
-	}
+            span {
+                font-family: "karla", sans-serif;
+                font-size: 10px;
+                color: $vertClaire;
+                font-weight: 100;
+            }
+        }
+    }
 }
 
 .projects {
-	background-color: $vert;
-	padding-bottom: 20px;
-	h2 {
-		font-family: 'Bebas Neue', sans-serif;
-		color: $vertFonce;
-		font-weight: 100;
-		font-size: 30px;
-		padding-top: 10px;
-		margin-bottom: 20px;
-	}
+    background: linear-gradient(to bottom right, #2c4a3b, #1a2c23);
+    padding-bottom: 20px;
+    h2 {
+        font-family: "Bebas Neue", sans-serif;
+        color: $vertFonce;
+        font-weight: 100;
+        font-size: 30px;
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
 }
 
 .contact {
-	height: 500px;
-	background: linear-gradient(0deg, rgba(35, 81, 70, 1) 0%, rgba(142, 182, 155, 1) 90%);
-	padding-bottom: 20px;
+    height: 500px;
+    background: linear-gradient(0deg, rgba(35, 81, 70, 1) 0%, rgba(142, 182, 155, 1) 90%);
+    padding-bottom: 20px;
 
-	h2 {
-		font-family: 'Bebas Neue', sans-serif;
-		color: $vertClaire;
-		font-weight: 100;
-		padding-top: 10px;
-		font-size: 30px;
-	}
+    h2 {
+        font-family: "Bebas Neue", sans-serif;
+        color: $vertClaire;
+        font-weight: 100;
+        padding-top: 10px;
+        font-size: 30px;
+    }
 
-	h3 {
-		font-family: 'Karla', sans-serif;
-		color: $vertClaire;
-		font-weight: 100;
-		font-size: 20px;
-	}
+    h3 {
+        font-family: "Karla", sans-serif;
+        color: $vertClaire;
+        font-weight: 100;
+        font-size: 20px;
+    }
 }
