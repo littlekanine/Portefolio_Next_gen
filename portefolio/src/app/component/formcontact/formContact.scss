@@ -1,82 +1,117 @@
 @use '../../vendors/variable.scss' as *;
 
-.formulaire {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 90% !important;
-	background-color: #ffffff1a;
-	border-radius: 10px;
-	padding: 20px;
+.contact-container {
+	width: 100%;
+	overflow: hidden;
+	background: linear-gradient(to bottom right, #2c4a3b, #1a2c23);
+}
 
-	form {
-		width: 90%;
-		height: 80%;
+.background-decor {
+	inset: 0;
+	overflow: hidden;
 
-		label {
-			position: absolute;
-			width: 1px;
-			height: 1px;
-			padding: 0;
-			margin: -1px;
-			overflow: hidden;
-			clip: rect(0, 0, 0, 0);
-			border: 0;
+	.circle-border {
+		position: absolute;
+		width: 200px;
+		height: 200px;
+		border: 1px solid #96b6a2;
+		border-radius: 9999px;
+		opacity: 0.1;
+		right: -80px;
+		top: 80px;
+	}
+
+	.circle-blur {
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		background-color: #96b6a2;
+		border-radius: 9999px;
+		filter: blur(48px);
+		opacity: 0.05;
+		left: 33%;
+		bottom: 33%;
+	}
+}
+
+.form-wrapper {
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 5rem 1.5rem;
+	position: relative;
+	z-index: 10;
+
+	.form-header {
+		text-align: center;
+		margin-bottom: 3rem;
+
+		h2 {
+			font-size: 2.5rem;
+			font-weight: bold;
+			color: white;
+			margin-bottom: 1rem;
 		}
 
-		input {
+		p {
+			color: #96b6a2;
+			font-size: 1.25rem;
+		}
+	}
+
+	.alert-message {
+		color: #f87171;
+		background-color: rgba(255, 255, 255, 0.05);
+		padding: 1rem;
+		border-radius: 0.5rem;
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+
+	.form-content {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+
+		label {
+			display: block;
+			color: #96b6a2;
+			margin-bottom: 0.5rem;
+		}
+
+		input,
+		textarea {
 			width: 100%;
-			height: 40px;
-			border-radius: 10px;
-			border: none;
-			background-color: $vertClaire;
-			padding-left: 10px;
-			font-family: 'Karla';
-			color: $vertNoire;
+			background-color: rgba(255, 255, 255, 0.1);
+			border: 1px solid #96b6a2;
+			border-radius: 0.5rem;
+			padding: 0.75rem 1rem;
+			color: white;
+			::placeholder {
+				color: rgba(150, 182, 162, 0.5);
+			}
 			&:focus {
 				outline: none;
-				border: none;
+				box-shadow: 0 0 0 2px #96b6a2;
 			}
 		}
 
 		textarea {
-			width: 100%;
-			height: 100px;
-			border-radius: 10px;
-			border: none;
-			background-color: $vertClaire;
-			font-family: 'Karla';
-			padding-left: 10px;
-			padding-top: 10px;
-			color: $vertNoire;
-			resize: none;
-			&:focus {
-				outline: none;
-				border: none;
-			}
+			min-height: 150px;
 		}
-	}
 
-	button {
-		width: 40%;
-		height: 40px;
-		border-radius: 10px;
-		border: none;
-		background-color: $vertClaire;
-		color: $vertFonce;
-		p {
-			font-weight: 900;
-			font-family: 'Karla';
-		}
-	}
-	.messageAlerte {
-		background-color: $vertClaire;
-		padding: 10px;
-		border-radius: 10px;
-		.messageForm {
-			color: $vertFonce;
-			font-family: 'Karla';
+		button {
+			width: 100%;
+			background-color: #96b6a2;
+			color: #2c4a3b;
+			padding: 0.75rem 1.5rem;
+			border-radius: 9999px;
+			font-size: 1.125rem;
+			font-weight: 500;
+			transition: background-color 0.3s;
+
+			&:hover {
+				background-color: white;
+			}
 		}
 	}
 }

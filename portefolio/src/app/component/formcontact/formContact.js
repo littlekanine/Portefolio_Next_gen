@@ -4,7 +4,8 @@ import './formContact.scss';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-const FormContact = () => {
+
+const ContactForm = () => {
 	const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 	const [messageAlerte, setMessageAlerte] = useState('');
 
@@ -38,36 +39,35 @@ const FormContact = () => {
 	};
 
 	return (
-		<div className="formulaire flex center column gap10 relative shadow">
-			<form className="flex center column gap10 relative" onSubmit={handleSubmit}>
-				<div className="flex center column gap10">
-					<label htmlFor="name">Nom</label>
-					<input type="text" id="name" name="name" placeholder="Votre nom" required onChange={handleChange} value={formData.name} />
+		<div className="contact-container">
+			<div className="background-decor">
+				<div className="circle-border" />
+				<div className="circle-blur" />
+			</div>
+			<div className="form-wrapper">
+				<div className="form-header">
+					<h2>Get in Touch</h2>
+					<p>Let's discuss your next project</p>
 				</div>
-				<div className="flex center column gap10">
-					<label htmlFor="email">email</label>
-					<input type="email" id="email" name="email" placeholder="Votre@email.com" required onChange={handleChange} value={formData.email} />
-				</div>
-				<div className="flex center column gap10">
-					<label htmlFor="message">Message</label>
-					<textarea id="message" name="message" rows="4" required onChange={handleChange} value={formData.message}></textarea>
-				</div>
-				<div className="flex center align-center column gap10">
-					<button type="submit" className="submit-button flex center align-center gap10">
-						<FontAwesomeIcon icon={faPaperPlane} className="icon" />
-						<p>Envoyer</p>
-					</button>
-				</div>
-			</form>
-			{messageAlerte ? (
-				<div className="flex center align-center messageAlerte">
-					<p className="messageForm">{messageAlerte}</p>
-				</div>
-			) : (
-				''
-			)}
+				<form onSubmit={handleSubmit} className="form-content">
+					{messageAlerte && <p className="alert-message">{messageAlerte}</p>}
+					<div>
+						<label htmlFor="name">Name</label>
+						<input type="text" id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Your name" required />
+					</div>
+					<div>
+						<label htmlFor="email">Email</label>
+						<input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="your@email.com" required />
+					</div>
+					<div>
+						<label htmlFor="message">Message</label>
+						<textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Your message" required />
+					</div>
+					<button type="submit">Send Message</button>
+				</form>
+			</div>
 		</div>
 	);
 };
 
-export default FormContact;
+export default ContactForm;
