@@ -48,7 +48,7 @@
 		h2 {
 			font-size: 2.5rem;
 			font-weight: bold;
-			color: white;
+			color: $vertClaire;
 			margin-bottom: 1rem;
 		}
 
@@ -108,9 +108,14 @@
 			font-size: 1.125rem;
 			font-weight: 500;
 			transition: background-color 0.3s;
+			border:none;
+			transition : 0.5s ease-in-out; 
+
 
 			&:hover {
 				background-color: white;
+				transform : scale(1.1);
+				padding:auto ;
 			}
 		}
 	}

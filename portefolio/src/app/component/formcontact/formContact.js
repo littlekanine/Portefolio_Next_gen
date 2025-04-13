@@ -46,8 +46,8 @@ const ContactForm = () => {
 			</div>
 			<div className="form-wrapper">
 				<div className="form-header">
-					<h2>Get in Touch</h2>
-					<p>Let's discuss your next project</p>
+					<h2>Entrons en contact</h2>
+					<p>Parlons de votre prochain projet</p>
 				</div>
 				<form onSubmit={handleSubmit} className="form-content">
 					{messageAlerte && <p className="alert-message">{messageAlerte}</p>}
