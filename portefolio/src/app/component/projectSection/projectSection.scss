@@ -12,6 +12,11 @@
         text-align: center;
         font-size: 3rem;
         margin-bottom: 2rem;
+        color: $vertClaire;
+    }
+
+    &__title-section {
+        color: $vertClaire;
     }
 
     &__intro {
@@ -41,6 +46,8 @@
         flex-wrap: wrap;
         gap: 2rem;
         margin-top: 2rem;
+        margin-bottom: 2rem;
+
     }
 
     &__button {
@@ -51,6 +58,12 @@
 
         &.click {
             transform: rotate(90deg);
+            transition: transform 0.3s ease;
+        }
+
+        &:hover {
+            transform: rotate(90deg) scale(1.1);
+            // transition: transform 0.3s ease;
         }
     }
 
