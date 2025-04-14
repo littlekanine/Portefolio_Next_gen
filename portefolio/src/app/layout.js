@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-	title: 'Portefolio Elia Kopff',
-	description: 'Portefolio du développeur Web Toulousain, Elia Kopff',
+	title: 'Portfolio Elia Kopff',
+	description: 'Portfolio du développeur Web Toulousain, Elia Kopff',
 	keywords: ['développeur web', 'portfolio', 'Next.js', 'Toulouse', 'React', 'Elia Kopff'],
 	authors: [{ name: 'Elia Kopff', url: 'https://tonsite.com' }],
 	creator: 'Elia Kopff',
