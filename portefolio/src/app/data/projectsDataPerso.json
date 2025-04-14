@@ -3,7 +3,7 @@
         "id": 1,
         "nom": "Cocktails4You",
         "img": "/cocktails4you.png",
-        "langages": ["html5", "css3", "", "MongoDB"],
+        "langages": ["html5", "css3", "react", "MongoDB"],
         "website": "https://cocktail4you.vercel.app/",
         "gitHubSite": "https://github.com/littlekanine/Cocktail4you_new",
         "iconSite": "globe",

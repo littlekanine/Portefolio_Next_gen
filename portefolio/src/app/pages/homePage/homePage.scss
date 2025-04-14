@@ -1,5 +1,9 @@
 @use "../../vendors/variable.scss" as *;
 
+html,body {
+    scroll-behavior:smooth ;
+}
+
 .hightPage {
     height: 40%;
     background-color: $vert;
@@ -20,17 +24,6 @@
         bottom: -15px;
         z-index: 10;
     }
-
-    // .dot {
-    // 	color: $vertClaire;
-    // 	background-image: radial-gradient($vertClaire 1px, transparent 1px);
-    // 	background-size: 10px 10px;
-    // 	width: 127px;
-    // 	height: 27px;
-    // 	top: 77px;
-    // 	left: 45px;
-    // 	z-index: 1;
-    // }
 
     h1 {
         font-family: "Bebas Neue", sans-serif;

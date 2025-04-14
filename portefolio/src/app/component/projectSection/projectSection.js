@@ -14,10 +14,10 @@ export const ProjectsSection = () => {
     const [isRotatedPerso, setIsRotatedPerso] = useState(false);
 
     return (
-        <section className="projects">
+        <section className="projects" id="projects">
             <div className="projects__container">
                 <h1 className="projects__title">Projets</h1>
-                <div className="relative flex row gap10 center align-center margin20Bottom">
+                <div className="relative flex row gap10 center  align-center margin20Bottom">
                     <h2 className="projects__title-section">Projets personnels</h2>
                     <ArrowBigRight className={`projects__button flex align-center cursor ${isRotatedPerso ? "click" : ""}`} onClick={() => setIsRotatedPerso(!isRotatedPerso)} size={40} />
                 </div>
@@ -61,7 +61,6 @@ export const ProjectsSection = () => {
                     <div className="relative flex row gap10 align-center margin20Bottom">
                         <h2 className="projects__title-section">Projets Open Classroom 2023 - 2024</h2>
                         <ArrowBigRight className={`projects__button flex align-center cursor ${isRotated ? "click" : ""}`} onClick={() => setIsRotated(!isRotated)} size={40} />
-                        {/* </button> */}
                     </div>
                     <AnimatePresence>
                         {isRotated && (

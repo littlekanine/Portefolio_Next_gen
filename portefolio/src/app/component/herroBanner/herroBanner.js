@@ -14,9 +14,9 @@ export const HeroBanner = () => {
 
 			<nav className="hero-banner__nav">
 				<div className="nav-container">
-					<a href="#">About</a>
-					<a href="#">Projects</a>
-					<button>Contact Me</button>
+					<a href="#about">About</a>
+					<a href="#projects">Projects</a>
+					<a href="#contact">Contact Me</a>
 				</div>
 			</nav>
 
@@ -29,15 +29,6 @@ export const HeroBanner = () => {
 					</div>
 
 					<p className="description">Creating clean code for ambitious ideas, transforming concepts into elegant digital solutions.</p>
-
-					{/* <div className="social-container">
-						<a href="#" aria-label="Instagram">
-							<InstagramIcon size={28} />
-						</a>
-						<a href="#" aria-label="LinkedIn">
-							<LinkedinIcon size={28} />
-						</a>
-					</div> */}
 				</div>
 
 				<div className="background-blur"></div>
