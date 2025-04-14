@@ -100,6 +100,8 @@
 		}
 
 		button {
+			display: flex;
+			justify-content: center;
 			width: 100%;
 			background-color: #96b6a2;
 			color: #2c4a3b;
@@ -108,14 +110,14 @@
 			font-size: 1.125rem;
 			font-weight: 500;
 			transition: background-color 0.3s;
-			border:none;
-			transition : 0.5s ease-in-out; 
-
+			border: none;
+			transition: 0.5s ease-in-out;
+			gap: 10px;
 
 			&:hover {
 				background-color: white;
-				transform : scale(1.1);
-				padding:auto ;
+				transform: scale(1.1);
+				padding: auto;
 			}
 		}
 	}

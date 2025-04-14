@@ -1,12 +1,18 @@
 [
-    {
-        "id": 1,
-        "nom": "Cocktails4You",
-        "img": "/cocktails4you.png",
-        "langages": ["html5", "css3", "react", "MongoDB"],
-        "website": "https://cocktail4you.vercel.app/",
-        "gitHubSite": "https://github.com/littlekanine/Cocktail4you_new",
-        "iconSite": "globe",
-        "description": ["Application pour barmans amateurs/professionel, permettant la recherche rapide, la mise en favoris mais également le partage de cocktails créations."]
-    }
+	{
+		"id": 1,
+		"nom": {
+			"fr": "Cocktails4You",
+			"en": "Cocktails4You"
+		},
+		"img": "/cocktails4you.png",
+		"langages": ["html5", "css3", "react", "MongoDB"],
+		"website": "https://cocktail4you.vercel.app/",
+		"gitHubSite": "https://github.com/littlekanine/Cocktail4you_new",
+		"iconSite": "globe",
+		"description": {
+			"fr": ["Application pour barmans amateurs/professionnels, permettant la recherche rapide, la mise en favoris mais également le partage de cocktails créations."],
+			"en": ["App for amateur/professional bartenders, allowing quick search, favorites, and sharing of cocktail creations."]
+		}
+	}
 ]
